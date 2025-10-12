@@ -1,10 +1,9 @@
-import { StyleSheet } from 'react-native';
-import { themeStyles } from '../../global/styles/theme';
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
     marginTop: 10,
-    width: '100%'
+    width: "100%",
   },
   content: {
     marginTop: 40,
@@ -14,12 +13,12 @@ export const styles = StyleSheet.create({
   text: {
     lineHeight: 30,
     fontSize: 14,
-    fontWeight: 'normal',
-    textAlign: 'justify'
+    fontWeight: "normal",
+    textAlign: "justify",
   },
   bold: {
     lineHeight: 30,
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });

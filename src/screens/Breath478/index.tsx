@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
-import { ScreenComponent } from '../../components/ScreenComponent';
-import { styles } from './styles';
-import { HeaderBreath } from '../../components/HeaderBreath';
-import { ModalInfo } from '../../components/ModalInfo/ModalInfo';
-import { useThemeControl } from '../../stores/themeSetColor';
-import { themeStyles } from '../../global/styles/theme';
-import { TimerCircleAnimated } from '../../components/TimerCircleAnimated';
-import { useTranslation } from 'react-i18next';
+import React, { useState, useEffect } from "react";
+import { View, Text, TouchableOpacity } from "react-native";
+import { ScreenComponent } from "../../components/ScreenComponent";
+import { styles } from "./styles";
+import { HeaderBreath } from "../../components/HeaderBreath";
+import { ModalInfo } from "../../components/ModalInfo/ModalInfo";
+import { useThemeControl } from "../../stores/themeSetColor";
+import { themeStyles } from "../../global/styles/theme";
+import { TimerCircleAnimated } from "../../components/TimerCircleAnimated";
+import { useTranslation } from "react-i18next";
 
 export function Breath478() {
   const { theme } = useThemeControl();
@@ -16,20 +16,20 @@ export function Breath478() {
   const [seconds, setSeconds] = useState(0);
   const [stage, setStage] = useState(1);
   const [breathe, setBreathe] = useState("");
-  const [color, setColor] = useState(theme.colors.primaryColor)
+  const [color, setColor] = useState(theme.colors.primaryColor);
 
   useEffect(() => {
     let intervalId: NodeJS.Timeout;
 
     if (stage === 1) {
       setBreathe("screen_487_6");
-      setColor("#00FF7F")
+      setColor("#00FF7F");
     } else if (stage === 2) {
       setBreathe("screen_487_7");
-      setColor("#B22222")
+      setColor("#B22222");
     } else {
       setBreathe("screen_487_8");
-      setColor("#00FF7F")
+      setColor("#00FF7F");
     }
 
     if (timerStart) {
@@ -50,10 +50,10 @@ export function Breath478() {
         });
       }, 1000);
     } else {
-      setColor(theme.colors.primaryColor)
-      setBreathe("")
-      setStage(1)
-      setSeconds(0)
+      setColor(theme.colors.primaryColor);
+      setBreathe("");
+      setStage(1);
+      setSeconds(0);
     }
 
     return () => {
@@ -63,56 +63,126 @@ export function Breath478() {
 
   return (
     <ScreenComponent>
-      <HeaderBreath icon='breath_2' title='breath_2' />
+      <HeaderBreath icon="breath_2" title="breath_2" />
 
       <View style={styles.contentInfo}>
-        <Text style={[styles.text, {
-          color: theme.colors.textColor,
-          fontFamily: theme.fonts.textRegular
-        }]}>{t('screen_487_1')}</Text>
-        <Text style={[styles.text, {
-          color: theme.colors.textColor,
-          fontFamily: theme.fonts.textRegular
-        }]}>{t('screen_487_2')}</Text>
-        <Text style={[styles.text, {
-          color: theme.colors.textColor,
-          fontFamily: theme.fonts.textRegular
-        }]}>{t('screen_487_3')}</Text>
-        <Text style={[styles.text, {
-          color: theme.colors.textColor,
-          fontFamily: theme.fonts.textRegular
-        }]}>{t('screen_487_4')}</Text>
+        <Text
+          style={[
+            styles.text,
+            {
+              color: theme.colors.textColor,
+              fontFamily: theme.fonts.textRegular,
+            },
+          ]}
+        >
+          {t("screen_487_1")}
+        </Text>
+        <Text
+          style={[
+            styles.text,
+            {
+              color: theme.colors.textColor,
+              fontFamily: theme.fonts.textRegular,
+            },
+          ]}
+        >
+          {t("screen_487_2")}
+        </Text>
+        <Text
+          style={[
+            styles.text,
+            {
+              color: theme.colors.textColor,
+              fontFamily: theme.fonts.textRegular,
+            },
+          ]}
+        >
+          {t("screen_487_3")}
+        </Text>
+        <Text
+          style={[
+            styles.text,
+            {
+              color: theme.colors.textColor,
+              fontFamily: theme.fonts.textRegular,
+            },
+          ]}
+        >
+          {t("screen_487_4")}
+        </Text>
       </View>
 
-      <Text style={[styles.label, { color: theme.colors.textColor, }]}>{timerStart ? `${t(breathe)}` : `${t('screen_487_5')}`}</Text>
+      <Text style={[styles.label, { color: theme.colors.textColor }]}>
+        {timerStart ? `${t(breathe)}` : `${t("screen_487_5")}`}
+      </Text>
       <View style={styles.boxStopWatch}>
-        <Text style={[styles.watch, { color: theme.colors.textColor }]}>{timerStart ? seconds : "0"}</Text>
-        <View style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'absolute' }}>
-          <TimerCircleAnimated color={color} colorTop={theme.colors.primaryColor} spinInit={timerStart} />
+        <Text style={[styles.watch, { color: theme.colors.textColor }]}>
+          {timerStart ? seconds : "0"}
+        </Text>
+        <View
+          style={{
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            position: "absolute",
+          }}
+        >
+          <TimerCircleAnimated
+            color={color}
+            colorTop={theme.colors.primaryColor}
+            spinInit={timerStart}
+          />
         </View>
       </View>
 
       <View style={styles.containerButton}>
-        <TouchableOpacity style={styles.play} onPress={() => setTimerStart(true)} accessibilityLabel='Start Button'>
-          <Text style={[styles.titleButton, { fontFamily: theme.fonts.textBold, color: themeStyles.light.colors.textColor }]}>{t('screen_487_Start')}</Text>
+        <TouchableOpacity
+          style={styles.play}
+          onPress={() => setTimerStart(true)}
+          accessibilityLabel="Start Button"
+        >
+          <Text
+            style={[
+              styles.titleButton,
+              {
+                fontFamily: theme.fonts.textBold,
+                color: themeStyles.light.colors.textColor,
+              },
+            ]}
+          >
+            {t("screen_487_Start")}
+          </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.play, styles.stop]} onPress={() => setTimerStart(false)} accessibilityLabel='Stop Button'>
-          <Text style={[styles.titleButton, { fontFamily: theme.fonts.textBold, color: themeStyles.light.colors.textColor }]}>{t('screen_487_Stop')}</Text>
+        <TouchableOpacity
+          style={[styles.play, styles.stop]}
+          onPress={() => setTimerStart(false)}
+          accessibilityLabel="Stop Button"
+        >
+          <Text
+            style={[
+              styles.titleButton,
+              {
+                fontFamily: theme.fonts.textBold,
+                color: themeStyles.light.colors.textColor,
+              },
+            ]}
+          >
+            {t("screen_487_Stop")}
+          </Text>
         </TouchableOpacity>
       </View>
 
-
       <ModalInfo>
-        <Text style={[styles.textModal, { color: theme.colors.textColor, }]}>
-          {t('info_478_text_1')}
-          {'\n \n'}
-          {t('info_478_text_2')}
-          {'\n \n'}
-          {t('info_478_text_3')}
+        <Text style={[styles.textModal, { color: theme.colors.textColor }]}>
+          {t("info_478_text_1")}
+          {"\n \n"}
+          {t("info_478_text_2")}
+          {"\n \n"}
+          {t("info_478_text_3")}
         </Text>
       </ModalInfo>
-
-
     </ScreenComponent>
   );
 }

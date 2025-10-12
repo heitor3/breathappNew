@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Image, Text, TouchableOpacity } from "react-native";
-import back from "../../assets/back.png";
 import { styles } from "./styles";
 import * as breath from "../../assets/IconBreath";
 import { useNavigation } from "@react-navigation/native";
