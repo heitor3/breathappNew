@@ -1,12 +1,5 @@
 import React, { ReactNode } from "react";
-import {
-  TouchableOpacity,
-  View,
-  ViewProps,
-  Image,
-  SafeAreaView,
-} from "react-native";
-import InfoIcon from "../../assets/info.png";
+import { TouchableOpacity, View, ViewProps, SafeAreaView } from "react-native";
 import useModalHomeControl from "../../stores/modalHomeControl";
 import { styles } from "./styles";
 import { useThemeControl } from "../../stores/themeSetColor";

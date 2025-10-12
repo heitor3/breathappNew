@@ -1,11 +1,11 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
-    flexDirection: 'column',
-    width: '33.33%',
+    flexDirection: "column",
+    width: "33.33%",
     padding: 10,
-    alignItems: 'center',
+    alignItems: "center",
     height: 240,
   },
   icon: {
@@ -13,13 +13,11 @@ export const styles = StyleSheet.create({
     height: 64,
     borderRadius: 10,
     borderWidth: 1,
-
   },
   titleBreath: {
-    textAlign: 'center',
-    width: '100%',
+    textAlign: "center",
+    width: "100%",
     marginTop: 8,
     lineHeight: 18,
-  }
-
+  },
 });

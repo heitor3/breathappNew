@@ -1,18 +1,18 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
     marginTop: 20,
-    flexDirection: 'row',
+    flexDirection: "row",
     height: 20,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   dot: {
     height: 10,
     borderRadius: 5,
     backgroundColor: "#4e4d4df1",
-    marginHorizontal: 8
-  }
+    marginHorizontal: 8,
+  },
 });

@@ -7,12 +7,15 @@ type TimerCircleAnimatedProps = {
   spinInit: boolean;
 };
 
-export function TimerCircleAnimated({ colorTop, color, spinInit }: TimerCircleAnimatedProps) {
+export function TimerCircleAnimated({
+  colorTop,
+  color,
+  spinInit,
+}: TimerCircleAnimatedProps) {
   const spinValue = useRef(new Animated.Value(0)).current;
   let animation: Animated.CompositeAnimation | null = null;
 
   useEffect(() => {
-
     const startAnimation = () => {
       animation = Animated.loop(
         Animated.timing(spinValue, {
@@ -20,7 +23,7 @@ export function TimerCircleAnimated({ colorTop, color, spinInit }: TimerCircleAn
           duration: 2000,
           easing: Easing.linear,
           useNativeDriver: true,
-        })
+        }),
       );
 
       animation.start();
@@ -70,6 +73,6 @@ const styles = StyleSheet.create({
     width: 130,
     height: 130,
     borderRadius: 100,
-    borderWidth: 10
+    borderWidth: 10,
   },
 });
