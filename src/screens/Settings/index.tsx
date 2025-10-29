@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome5";
+import Icon from "@react-native-vector-icons/material-design-icons";
 
 import { styles } from "./styles";
 import { ScreenComponent } from "../../components/ScreenComponent";
@@ -47,7 +47,7 @@ export function Settings() {
       toggleTheme(currentTheme === "dark" ? "light" : "dark");
       await AsyncStorage.setItem(
         "theme",
-        currentTheme === "dark" ? "light" : "dark",
+        currentTheme === "dark" ? "light" : "dark"
       );
 
       currentTheme === "dark"
@@ -62,7 +62,7 @@ export function Settings() {
     <ScreenComponent showInfoButton={false}>
       <View style={styles.headerContainer}>
         <TouchableOpacity style={styles.back} onPress={() => navigate("home")}>
-          <Icon name="chevron-left" color={theme.colors.textColor} size={22} />
+          <Icon name="chevron-left" color={theme.colors.textColor} size={24} />
         </TouchableOpacity>
         <Text
           style={[
@@ -108,7 +108,11 @@ export function Settings() {
               <Text style={{ color: theme.colors.textColor }}>
                 {t("settings_3")}
               </Text>
-              <Icon name="sun" size={14} color={theme.colors.textColor} solid />
+              <Icon
+                name="weather-sunny"
+                size={16}
+                color={theme.colors.textColor}
+              />
             </View>
             <View style={styles.radioButtonContainer}>
               <RadioButton
@@ -121,10 +125,9 @@ export function Settings() {
                 {t("settings_4")}
               </Text>
               <Icon
-                name="moon"
-                size={14}
+                name="weather-night"
+                size={16}
                 color={theme.colors.textColor}
-                solid
               />
             </View>
           </View>

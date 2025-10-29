@@ -8,7 +8,7 @@ import { ScreenComponent } from "../../components/ScreenComponent";
 import { useThemeControl } from "../../stores/themeSetColor";
 import "../../utils/i18n";
 import { useTranslation } from "react-i18next";
-import Icon from "react-native-vector-icons/Ionicons";
+import Icon from "@react-native-vector-icons/material-design-icons";
 
 export function Home() {
   const { t } = useTranslation();
@@ -22,7 +22,7 @@ export function Home() {
       return () => {
         setHomeFocus(false);
       };
-    }, []),
+    }, [])
   );
 
   return (
@@ -42,11 +42,7 @@ export function Home() {
           style={{ borderRadius: 50, padding: 4 }}
           accessibilityLabel="options settings button"
         >
-          <Icon
-            name="settings-sharp"
-            color={theme.colors.textColor}
-            size={22}
-          />
+          <Icon name="cog" color={theme.colors.textColor} size={22} />
         </TouchableOpacity>
       </View>
       <View

@@ -1,9 +1,10 @@
 import React, { ReactNode } from "react";
-import { TouchableOpacity, View, ViewProps, SafeAreaView } from "react-native";
+import { TouchableOpacity, View, ViewProps } from "react-native";
 import useModalHomeControl from "../../stores/modalHomeControl";
 import { styles } from "./styles";
 import { useThemeControl } from "../../stores/themeSetColor";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import Icon from "@react-native-vector-icons/material-design-icons";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 type ScreenPorps = ViewProps & {
   children: ReactNode;
