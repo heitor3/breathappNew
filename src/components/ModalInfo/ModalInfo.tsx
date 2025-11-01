@@ -3,7 +3,7 @@ import { TouchableOpacity, View } from "react-native";
 import Modal from "react-native-modal";
 import useModalHomeControl from "../../stores/modalHomeControl";
 import { useThemeControl } from "../../stores/themeSetColor";
-import Icon from "react-native-vector-icons/Fontisto";
+import Icon from "@react-native-vector-icons/material-design-icons";
 
 type ModalProps = {
   width?: number;
@@ -41,7 +41,7 @@ export function ModalInfo({ width = 300, children }: ModalProps) {
               style={{ borderRadius: 50, padding: 6 }}
               onPress={() => setControlHomeModal(!controlHomeModal)}
             >
-              <Icon name="close-a" color={theme.colors.textColor} size={20} />
+              <Icon name="close" color={theme.colors.textColor} size={22} />
             </TouchableOpacity>
           </View>
           {children}

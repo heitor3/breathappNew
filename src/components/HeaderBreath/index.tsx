@@ -5,7 +5,7 @@ import * as breath from "../../assets/IconBreath";
 import { useNavigation } from "@react-navigation/native";
 import { useThemeControl } from "../../stores/themeSetColor";
 import { useTranslation } from "react-i18next";
-import Icon from "react-native-vector-icons/FontAwesome5";
+import Icon from "@react-native-vector-icons/material-design-icons";
 
 const BreathType = {
   breath_1: breath.AnxietyIcon,
@@ -47,7 +47,7 @@ export function HeaderBreath({ icon, title }: HeaderBreathProps) {
           style={{ borderRadius: 50, padding: 4 }}
           onPress={() => navigate("home")}
         >
-          <Icon name="chevron-left" color={theme.colors.textColor} size={22} />
+          <Icon name="chevron-left" color={theme.colors.textColor} size={24} />
         </TouchableOpacity>
       </View>
       <Image style={styles.logo} source={image} />
